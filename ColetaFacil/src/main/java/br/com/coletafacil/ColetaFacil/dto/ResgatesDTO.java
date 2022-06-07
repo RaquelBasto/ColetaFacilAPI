@@ -5,18 +5,13 @@ import br.com.coletafacil.ColetaFacil.model.Produtos;
 import br.com.coletafacil.ColetaFacil.model.Resgates;
 import br.com.coletafacil.ColetaFacil.model.Usuario;
 import br.com.coletafacil.ColetaFacil.repository.ResgatesRepository;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-@Getter
-@Setter
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
 public class ResgatesDTO {
 

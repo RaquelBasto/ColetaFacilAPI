@@ -18,6 +18,10 @@ public class UsuarioDTO{
 
     private String cpf;
 
+    private String email;
+
+    private String senha;
+
     private String nomeUsuario;
 
     private Integer ptsAcumulados;
@@ -36,6 +40,8 @@ public class UsuarioDTO{
         this.endereco = usuario.getEndereco();
         this.cep = usuario.getCep();
         this.contato = usuario.getContato();
+        this.email = usuario.getEmail();
+        this.senha = usuario.getSenha();
     }
 
     public Optional<Usuario> atualizar(Long id, UsuarioRepository usuarioRepository) {
@@ -49,7 +55,10 @@ public class UsuarioDTO{
         usuario.get().setContato(this.contato);
         usuario.get().setEndereco(this.endereco);
         usuario.get().setPtsAcumulados(this.ptsAcumulados);
+        usuario.get().setEmail(this.email);
+        usuario.get().setSenha(this.senha);
 
         return usuario;
+        // TODO: 06/06/2022 update na tabela 
     }
 }
